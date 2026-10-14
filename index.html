@@ -3,62 +3,25 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Upwork Proposal Checklist — R. Lane</title>
-<meta name="description" content="A free self-check for Upwork-style proposals: specificity, outcome, length, and next step—no login, no tracking."/>
+<title>R. Lane — tools & book guides</title>
 <style>
-body{font-family:system-ui,-apple-system,sans-serif;max-width:720px;margin:2rem auto;padding:0 1rem;line-height:1.5;color:#111}
-h1{font-size:1.4rem} h2{font-size:1.1rem;margin-top:1.5rem}
-label{display:block;margin:.45rem 0;padding:.55rem .7rem;border:1px solid #ddd;border-radius:8px}
-textarea{width:100%;min-height:140px;padding:.6rem;font:inherit}
-#score{font-weight:600;margin-top:1rem}
-.pass{color:#0a7} .fail{color:#a40}
-footer{margin-top:2rem;font-size:.9rem;color:#444;border-top:1px solid #eee;padding-top:1rem}
-a{color:#06c}
+body{font-family:system-ui,sans-serif;max-width:720px;margin:2rem auto;padding:0 1rem;line-height:1.5}
+a{color:#06c} li{margin:.4rem 0}
 </style>
 </head>
 <body>
-<h1>Upwork Proposal Checklist</h1>
-<p>Paste a draft proposal. This page scores structure only—it does not call an AI API and does not store your text. By <strong>R. Lane</strong>.</p>
-<textarea id="draft" placeholder="Paste your proposal draft here…"></textarea>
-<button id="run" type="button">Check</button>
-<p id="score"></p>
-<ul id="list"></ul>
-<h2>What “good enough” usually means</h2>
+<h1>R. Lane</h1>
+<p>Practical freelancing tools and short buying guides. No login. No tracking scripts.</p>
+<h2>Tools</h2>
 <ul>
-<li>Opening names <em>this</em> job’s outcome or constraint (not a bio).</li>
-<li>One relevant proof point, stated truthfully.</li>
-<li>Clear includes/excludes if you mention price.</li>
-<li>One useful question + a low-pressure next step.</li>
-<li>Timezone as logistics, not an apology.</li>
+<li><a href="./tools/upwork-proposal-checklist.html">Upwork Proposal Checklist</a></li>
 </ul>
-<footer>
-<p>Related Kindle (author DENG HENG): <em>Upwork Proposals That Win US Clients</em> — search that exact title on Amazon, or open ASIN <code>B0HMJ93TFF</code> on Amazon.com.</p>
-<p>Practice tool only—not legal advice. No income or win-rate guarantees. Does not reproduce book chapter text.</p>
-</footer>
-<script>
-const checks=[
-{id:'length',label:'Under ~220 words (scannable)',fn:t=>t.trim().split(/\s+/).filter(Boolean).length>0 && t.trim().split(/\s+/).filter(Boolean).length<=220},
-{id:'notBio',label:'Does not open with a long “I am an experienced…” bio',fn:t=>!/^\s*(hello[,!]?\s+)?i am an experienced/i.test(t)},
-{id:'specific',label:'Mentions a concrete deliverable/outcome word (site, copy, design, migrate, fix, audit, dashboard, API, etc.)',fn:t=>/(site|website|landing|copy|design|migrat|fix|audit|dashboard|api|proposal|brief|deadline|scope|plugin|cms)/i.test(t)},
-{id:'question',label:'Contains at least one question mark (clarifying question)',fn:t=>t.includes('?')},
-{id:'next',label:'Suggests a next step (review, call, sample, audit, start)',fn:t=>/(next step|happy to|i can start|review|sample|audit|walk through|clarify)/i.test(t)},
-{id:'noGuarantee',label:'Avoids guaranteed win / guaranteed income language',fn:t=>!/(guarantee|guaranteed|100%\s*win|sure to get the job)/i.test(t)},
-];
-function run(){
- const t=document.getElementById('draft').value||'';
- const list=document.getElementById('list'); list.innerHTML='';
- let pass=0;
- for(const c of checks){
-  const ok=c.fn(t);
-  if(ok) pass++;
-  const li=document.createElement('li');
-  li.className=ok?'pass':'fail';
-  li.textContent=(ok?'✓ ':'✗ ')+c.label;
-  list.appendChild(li);
- }
- document.getElementById('score').textContent= t.trim()?`Score: ${pass}/${checks.length}`:'Paste a draft first.';
-}
-document.getElementById('run').onclick=run;
-</script>
+<h2>Book guides</h2>
+<ul>
+<li><a href="./books/upwork-proposals.html">Upwork Proposals (Kindle)</a></li>
+<li><a href="./books/writing-for-us-clients.html">Writing for US Clients (Kindle)</a></li>
+<li><a href="./books/freelance-portfolios.html">Freelance Portfolios (Kindle)</a></li>
+</ul>
+<p style="color:#555;font-size:.9rem">Storefront author name on Amazon: DENG HENG. Site byline: R. Lane. Not legal/tax advice; no income guarantees.</p>
 </body>
 </html>
