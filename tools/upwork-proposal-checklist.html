@@ -14,11 +14,15 @@ textarea{width:100%;min-height:140px;padding:.6rem;font:inherit}
 .pass{color:#0a7} .fail{color:#a40}
 footer{margin-top:2rem;font-size:.9rem;color:#444;border-top:1px solid #eee;padding-top:1rem}
 a{color:#06c}
+a.btn{display:inline-block;margin:.4rem .5rem .4rem 0;padding:.65rem 1rem;background:#111;color:#fff;text-decoration:none;border-radius:8px}
+.cta{border:1px solid #c9a227;background:#fffbeb;padding:.85rem 1rem;border-radius:8px;margin:1.25rem 0}
+.byline{font-size:.92rem;color:#333}
 </style>
 </head>
 <body>
 <h1>Upwork Proposal Checklist</h1>
-<p>Paste a draft proposal. This page scores structure only—it does not call an AI API and does not store your text. By <strong>R. Lane</strong>.</p>
+<p>Paste a draft proposal. This page scores structure only—it does not call an AI API and does not store your text.</p>
+<p class="byline"><strong>Site byline:</strong> R. Lane · <strong>Amazon author:</strong> DENG HENG</p>
 <textarea id="draft" placeholder="Paste your proposal draft here…"></textarea>
 <button id="run" type="button">Check</button>
 <p id="score"></p>
@@ -31,9 +35,17 @@ a{color:#06c}
 <li>One useful question + a low-pressure next step.</li>
 <li>Timezone as logistics, not an apology.</li>
 </ul>
+<div class="cta">
+<p><strong>Want the full field guide?</strong> Kindle: <em>Upwork Proposals That Win US Clients</em> (ASIN <code>B0HMJ93TFF</code>). During promo week, Amazon may show a limited-time Kindle price—always verify on the product page.</p>
+<p>
+<a class="btn" href="../go/upwork-select.html">Open Amazon (promo path)</a>
+<a href="https://www.amazon.com/dp/B0HMJ93TFF?utm_source=hub&amp;utm_medium=web&amp;utm_campaign=upwork-select" rel="noopener">or amazon.com/dp/B0HMJ93TFF</a>
+</p>
+<p>Or search the <strong>exact title</strong> on Amazon if the link is unavailable in your region.</p>
+</div>
 <footer>
-<p>Related Kindle (author DENG HENG): <em>Upwork Proposals That Win US Clients</em> — search that exact title on Amazon, or open ASIN <code>B0HMJ93TFF</code> on Amazon.com.</p>
-<p>Practice tool only—not legal advice. No income or win-rate guarantees. Does not reproduce book chapter text.</p>
+<p>Practice tool only—not legal advice. No income or win-rate guarantees. Does not reproduce book chapter text. No tracking scripts.</p>
+<p><a href="../promo-updates.html">Promo updates</a> · <a href="../books/upwork-proposals.html">Book buying guide</a> · <a href="../">Hub</a></p>
 </footer>
 <script>
 const checks=[
